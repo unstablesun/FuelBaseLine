@@ -395,5 +395,11 @@ public class FuelListener : FuelSDKListener
 		}
 
 	}
+
+	public override void OnSocialLogin (bool allowCache)
+	{
+		m_fuelObj.OnSocialLogin ();
+	}
+
 	
 }

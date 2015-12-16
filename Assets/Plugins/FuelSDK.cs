@@ -62,7 +62,7 @@ public class FuelSDK : MonoBehaviour {
 	
 	public string GameKey;
 	public string GameSecret;
-	private bool UseTestServers = false;
+	private bool UseTestServers = true;
 	public ContentOrientation Orientation = ContentOrientation.landscape;
 	public bool iOSGameHandleLogin;
 	public bool iOSGameHandleInvite;

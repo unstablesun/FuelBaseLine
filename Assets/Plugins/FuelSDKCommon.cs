@@ -21,13 +21,7 @@ public class FuelSDKCommon : MonoBehaviour
 
 	private static bool m_bInitialized;
 
-	#if UNITY_IPHONE
-	[DllImport ("__Internal")]
-	public static extern bool iOSSetUserConditions(string conditions);
-	[DllImport ("__Internal")]
-	public static extern bool iOSSyncUserValues();
-	#endif
-	
+
 	static FuelSDKCommon ()
 	{
 		m_bInitialized = false;
