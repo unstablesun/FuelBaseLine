@@ -112,7 +112,17 @@ public class FuelSDK : MonoBehaviour {
 				gameHandleInvite = AndroidGameHandleInvite;
 				gameHandleShare = AndroidGameHandleShare;				
 				#endif
-				
+
+
+				//---------------------------------------------------------------------------
+				//Begin debug build block
+				//if (PropellerDebugBuildSystem.SetDebugServers ()) {
+				//	key = PropellerDebugBuildSystem.GetGameKey ();
+				//	secret = PropellerDebugBuildSystem.GetGameSecret ();
+				//}
+				//End debug build block
+				//---------------------------------------------------------------------------
+
 				if (UseTestServers) {
 					GetFuelSDKPlatform().UseSandbox();
 				}
