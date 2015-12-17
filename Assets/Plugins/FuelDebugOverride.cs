@@ -25,8 +25,8 @@ public class FuelDebugOverride : MonoBehaviour
 	
 	
 	#if UNITY_IPHONE
-	[DllImport ("__Internal")]
-	public static extern void iOSSetDebugEnironment(string SdkUrl, string GrantooHost, string TournamentHost, string ChallengeHost, string CdnHost, string TransactionHost, string DynamicsHost);
+	//[DllImport ("__Internal")]
+	//public static extern void iOSSetDebugEnironment(string SdkUrl, string GrantooHost, string TournamentHost, string ChallengeHost, string CdnHost, string TransactionHost, string DynamicsHost);
 	#endif
 	
 	static FuelDebugOverride ()
@@ -128,7 +128,7 @@ public class FuelDebugOverride : MonoBehaviour
 		
 		Debug.Log ("DEBUG BUILD SYSTEM :: SetDebugServers");
 		#if UNITY_IPHONE
-		iOSSetDebugEnironment (SdkUrl, GrantooHost, TournamentHost, ChallengeHost, CdnHost, TransactionHost, DynamicsHost);
+		//iOSSetDebugEnironment (SdkUrl, GrantooHost, TournamentHost, ChallengeHost, CdnHost, TransactionHost, DynamicsHost);
 		#endif
 		
 		return true;
