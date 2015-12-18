@@ -161,12 +161,12 @@ public class FuelOBJ : MonoBehaviour
 		Debug.Log("PushFBDataToFuel"); 
 		
 		string provider = "jaddream";
-		string email = "davefuel4@gmail.com";
+		string email = "davereal@gmail.com";
 		//string id = FB.UserId;
 		//string token = FB.AccessToken;
 		//DateTime expireDate = FB.AccessTokenExpiresAt;
-		string nickname = "davenick";
-		string name = "daveatfuel";
+		string nickname = "davereal003";
+		string name = "daveatfuel6";
 		//string gender = fbgender;
 		
 		Dictionary<string, string> loginInfo = null;
@@ -176,27 +176,16 @@ public class FuelOBJ : MonoBehaviour
 		loginInfo.Add ("id", "100");
 		loginInfo.Add ("token", "200");
 		loginInfo.Add ("nickname", nickname);
-		loginInfo.Add ("name", name);
+		//loginInfo.Add ("name", name);
 		loginInfo.Add ("gender", "male");
 		loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/hotdog.png");
 
 		DebugConsole (loginInfo ["provider"].ToString ());
-		DebugConsole (loginInfo ["email"].ToString ());
+		//DebugConsole (loginInfo ["email"].ToString ());
 		DebugConsole (loginInfo ["nickname"].ToString ());
-		DebugConsole (loginInfo ["name"].ToString ());
+		//DebugConsole (loginInfo ["name"].ToString ());
 		DebugConsole (loginInfo ["avatarUrl"].ToString ());
 
-		Debug.Log 
-			(
-				"*** loginInfo ***" + "\n" +
-				"provider = " + loginInfo ["provider"].ToString () + "\n" +
-				"email = " + loginInfo ["email"].ToString () + "\n" +
-				"id = " + loginInfo ["id"].ToString () + "\n" +
-				"token = " + loginInfo ["token"].ToString () + "\n" +
-				"nickname = " + loginInfo ["nickname"].ToString () + "\n" +
-				"name = " + loginInfo ["name"].ToString () + "\n" +
-				"gender = " + loginInfo ["gender"].ToString () + "\n"
-				);
 
 
 		FuelSDK.SdkSocialLoginCompleted(loginInfo);
