@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
 	void Start () {
 	
 
-		canvasPopup1.gameObject.SetActive (true);
+		//canvasPopup1.gameObject.SetActive (true);
 	}
 	
 	// Update is called once per frame

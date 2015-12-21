@@ -161,24 +161,27 @@ public class FuelOBJ : MonoBehaviour
 		Debug.Log("PushFBDataToFuel"); 
 		
 		string provider = "jaddream";
-		string email = "davereal@gmail.com";
+		//string email = "TempUser0004@gmail.com";
 		//string id = FB.UserId;
 		//string token = FB.AccessToken;
 		//DateTime expireDate = FB.AccessTokenExpiresAt;
-		string nickname = "davereal003";
+		string nickname = "TempUser0004";
 		string name = "daveatfuel6";
 		//string gender = fbgender;
 		
 		Dictionary<string, string> loginInfo = null;
 		loginInfo = new Dictionary<string, string> ();
 		loginInfo.Add ("provider", provider);
-		loginInfo.Add ("email", email);
+		//loginInfo.Add ("email", email);
 		loginInfo.Add ("id", "100");
 		loginInfo.Add ("token", "200");
 		loginInfo.Add ("nickname", nickname);
 		//loginInfo.Add ("name", name);
 		loginInfo.Add ("gender", "male");
-		loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/hotdog.png");
+		//loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/hotdog.png");
+		loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/bear-02.png");
+
+	
 
 		DebugConsole (loginInfo ["provider"].ToString ());
 		//DebugConsole (loginInfo ["email"].ToString ());
