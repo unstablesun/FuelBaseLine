@@ -144,21 +144,14 @@ public class FuelOBJ : MonoBehaviour
 
 
 
-	public void OnSocialLogin()                                                                       
-	{
-		Debug.Log("trySocialLogin");
 
-		bool allowCache = true;
-		if (allowCache == true) {
-			pushFBDataToFuel ();
-			return;
-		}
-	}
-	
-	
-	private void pushFBDataToFuel()                                                                       
+
+
+
+
+	public void TempUserLogin()                                                                       
 	{
-		Debug.Log("PushFBDataToFuel"); 
+		Debug.Log("tempUserLogin"); 
 		
 		string provider = "jaddream";
 		//string email = "TempUser0004@gmail.com";
@@ -180,11 +173,46 @@ public class FuelOBJ : MonoBehaviour
 		loginInfo.Add ("gender", "male");
 		//loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/hotdog.png");
 		loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/bear-02.png");
+		
+		
+		
+		DebugConsole (loginInfo ["provider"].ToString ());
+		//DebugConsole (loginInfo ["email"].ToString ());
+		DebugConsole (loginInfo ["nickname"].ToString ());
+		//DebugConsole (loginInfo ["name"].ToString ());
+		DebugConsole (loginInfo ["avatarUrl"].ToString ());
+		
+		
+		
+		FuelSDK.SdkSocialLoginCompleted(loginInfo);
+
+	}
+
+	public void NormalUserLogin()                                                                       
+	{
+		Debug.Log("normalUserLogin"); 
+		
+		string provider = "jaddream";
+		string email = "NormalUser0004@gmail.com";
+		string nickname = "NormalUser0004";
+		string name = "daveatfuel6";
+
+		Dictionary<string, string> loginInfo = null;
+		loginInfo = new Dictionary<string, string> ();
+		loginInfo.Add ("provider", provider);
+		loginInfo.Add ("email", email);
+		loginInfo.Add ("id", "100");
+		loginInfo.Add ("token", "200");
+		loginInfo.Add ("nickname", nickname);
+		//loginInfo.Add ("name", name);
+		loginInfo.Add ("gender", "male");
+		loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/hotdog.png");
+		//loginInfo.Add ("avatarUrl", "https://s3-us-west-2.amazonaws.com/grantoo-staging/assets/avatars/bear-02.png");
 
 	
 
 		DebugConsole (loginInfo ["provider"].ToString ());
-		//DebugConsole (loginInfo ["email"].ToString ());
+		DebugConsole (loginInfo ["email"].ToString ());
 		DebugConsole (loginInfo ["nickname"].ToString ());
 		//DebugConsole (loginInfo ["name"].ToString ());
 		DebugConsole (loginInfo ["avatarUrl"].ToString ());
